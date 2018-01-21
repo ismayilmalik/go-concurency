@@ -14,6 +14,8 @@ func main()  {
 		defer wg.Done()
 		fmt.Println(msg)
 	})
+
+	wg.Wait()
 }
 
 func asyncLog(msg string, appenderCb func(string))  {
